@@ -1,0 +1,13 @@
+---
+
+# SWIFT unused parameter file
+# code version: 1.0.0
+# git revision: v1.0.0-30-g4d649a57-dirty
+# git branch: master
+# git date: 2023-07-25 15:04:44 +0000
+# current date: 12:44:44 2023-09-05 CST
+
+TimeIntegration:
+  time_begin: 0.
+  time_end: 1e-2
+...

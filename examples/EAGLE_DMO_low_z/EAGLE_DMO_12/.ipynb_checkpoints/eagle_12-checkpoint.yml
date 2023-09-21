@@ -32,8 +32,7 @@ Snapshots:
   time_first:          0.01  # Time of the first output (non-cosmological run) (in internal units)
   delta_time:          1.10  # Time difference between consecutive outputs (in internal units)
   compression:         1
-  invoke_fof:          1
-  
+
 # Parameters governing the conserved quantities statistics
 Statistics:
   scale_factor_first:  0.92 # Scale-factor of the first stat dump (cosmological run)
@@ -57,16 +56,3 @@ InitialConditions:
   cleanup_h_factors: 1               # Remove the h-factors inherited from Gadget
   cleanup_velocity_factors: 1        # Remove the sqrt(a) factor in the velocities inherited from Gadget
 
-FOF:
-  basename:                        fof_output  # Filename for the FOF outputs.
-  scale_factor_first:              0.91        # Scale-factor of first FoF black hole seeding calls.
-  time_first:                      0.2         # Time of first FoF black hole seeding calls.
-  delta_time:                      1.005       # Time between consecutive FoF black hole seeding calls.
-  min_group_size:                  256         # The minimum no. of particles required for a group.
-  linking_length_ratio:            0.2         # Linking length in units of the main inter-particle separation.
-  black_hole_seed_halo_mass_Msun:  1.5e10      # Minimal halo mass in which to seed a black hole (in solar masses).
-  dump_catalogue_when_seeding:     1           # (Optional) Write a FOF catalogue when seeding black holes. Defaults to 0 if unspecified.
-  absolute_linking_length:         -1.         # (Optional) Absolute linking length (in internal units).
-  group_id_default:                2147483647  # (Optional) Sets the group ID of particles in groups below the minimum size.
-  group_id_offset:                 1           # (Optional) Sets the offset of group ID labelling. Defaults to 1 if unspecified.
-  seed_black_holes_enabled:        0           # Do not seed black holes when running FOF
