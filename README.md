@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <a name="logo"/>
 <div align="center">
 <a href="https://www.swiftsim.com/" target="_blank">
@@ -216,3 +217,6 @@ Parameters:
 
 See the file examples/parameter_example.yml for an example of parameter file.
 ```
+=======
+# Swift
+>>>>>>> afc8f9be14ef6cc54325abadfc1a0ca0a5b52d4f
