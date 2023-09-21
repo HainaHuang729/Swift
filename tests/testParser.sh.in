@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./testParser @srcdir@/testParserInput.yaml

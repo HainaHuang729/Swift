@@ -1,0 +1,37 @@
+ICs extracted from the EAGLE suite of simulations. 
+
+WARNING: The ICs are 3.6GB in size. They contain ~52M DM particles,
+~50M gas particles and ~2M star particles.
+
+The particle distribution here is the snapshot 27 (z=0.1) of the 25Mpc
+Ref-model. h- and a- factors from the original Gadget code have been
+corrected for. Variables not used in a pure hydro & gravity code have
+been removed. 
+Everything is ready to be run without cosmological integration. 
+
+The particle load of the main EAGLE simulation can be reproduced by
+running these ICs on 64 cores.
+
+MD5 checksum of the ICs: 
+e6a5de0e962d8ffb7589671b9613daa0  EAGLE_ICs_25.hdf5
+
+
+A second example is set up to run with `./run_rt_test.sh`. It makes use
+of the `eagle_25_rt_test.yml` file, and is intended to stress-test the
+RT implementation rather than produce actual physically meaningful results.
+
+
+o   To use GEAR-RT, configure SWIFT with
+
+    --with-stars=basic --with-hydro=gizmo-mfv --with-riemann-solver=hllc --with-rt=GEAR_1 --with-rt-riemann-solver=GLF --with-feedback=none
+
+[technically, any other feedback scheme should work as well.]
+[the .yml file is set up to handle up to 3 photon groups, so
+ you could also be compiling with --with-rt=GEAR_3 if you want
+ to test more photon groups as well.]
+
+
+o   To use the DEBUG RT scheme, configure SWIFT with
+ --with-stars=basic --with-rt=debug --with-feedback=none
+
+[technically, any other feedback scheme should work as well.]
